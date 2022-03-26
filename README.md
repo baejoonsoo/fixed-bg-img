@@ -71,3 +71,21 @@
   - 음수는 유효하지 않음
 
 <br>
+
+## background-position
+
+- 위치 값으로 사용할 수 있는 것
+
+  - 가로 위치 값
+    - left
+    - center
+    - right
+    - 길이
+
+  <br>
+
+  - 세로 위치 값
+    - top
+    - center
+    - bottom
+    - 길이
