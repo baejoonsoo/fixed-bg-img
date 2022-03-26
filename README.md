@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+## background-attachment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- background-attachment속성이 배경이미지를 스크롤시에도 고정시키는 효과를 준다.
 
-## Available Scripts
+  |                |                                                  |
+  | :------------: | :----------------------------------------------: |
+  | scroll(기본값) | 배경이미지가 스크롤시 페이지와 함께 스크롤 처리  |
+  |     fixed      | 배경이미지가 스크롤시 페이지와는 다르게 고정처리 |
 
-In the project directory, you can run:
+<br>
 
-### `yarn start`
+## background-repeat
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 속성은 배경 이미지의 반복 방법을 지정
+- 가로축 및 세로축을 따라 반복할 수 있고, 아예 반복하지 않을 수도 있다
+- 두개의 값을 사용하여 각각 가로 세로 반복 방법을 지정할 수 있음
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- repeat
 
-### `yarn test`
+  - 요소의 배경 영역을 채울 때까지 이미지를 반복
+    <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - 마지막 반복 이미지가 넘칠 경우 잘라냅다
 
-### `yarn build`
+- space
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - 요소가 잘리지 않을 만큼 이미지를 반복
+    <br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - 제일 처음과 마지막 반복 이미지는 요소의 양쪽 끝에 고정되고, 각 이미지 사이에 남은 여백을 고르게 분배
+    <br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - 잘리지 않고 배치할 수 있는 이미지가 단 한 장인 경우가 아니라면 background-position (en-US) 속성은 무시
+    <br>
 
-### `yarn eject`
+  - space를 사용했는데 이미지가 잘리는 경우는 그 크기가 너무 커서 한 장 조차 넣을 수 없는 경우
+    <br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- round
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - 가용 영역이 늘어나면 반복 이미지도 늘어나 여백을 남기지 않는다
+    <br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - 이미지를 하나 더 추가할 공간이 생기면 (남은 공간 >= 이미지 너비의 절반) 비로소 반복 횟수를 하나 추가
+    <br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - 원래 존재하던 이미지는 <b>모두 줄어들어</b> 새로운 이미지를 위한 공간을 확보
+    <br>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- no-repeat
+  - 이미지를 반복하지 않는다
