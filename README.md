@@ -54,6 +54,10 @@
 
 ## background-size
 
+- 요소 배경 이미지의 크기를 설정하는 속성
+
+<br>
+
 - auto (default)
   - 배경 이미지의 원본 크기를 유지
 - contain
